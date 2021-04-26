@@ -14,6 +14,7 @@
 		2290B343263714560014459C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2290B342263714560014459C /* Assets.xcassets */; };
 		2290B346263714560014459C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2290B344263714560014459C /* LaunchScreen.storyboard */; };
 		2290B349263714560014459C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2290B348263714560014459C /* main.m */; };
+		2A3FAE2DAF7E14698D0D97B3 /* libPods-DemoAutoSign.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9E0B3EB9A4AF1F6860F052 /* libPods-DemoAutoSign.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,9 @@
 		2290B345263714560014459C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2290B347263714560014459C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2290B348263714560014459C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AD287986D3353819089A461 /* Pods-DemoAutoSign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoAutoSign.debug.xcconfig"; path = "Target Support Files/Pods-DemoAutoSign/Pods-DemoAutoSign.debug.xcconfig"; sourceTree = "<group>"; };
+		6C9E0B3EB9A4AF1F6860F052 /* libPods-DemoAutoSign.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoAutoSign.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		815A00869A1615883D9562F4 /* Pods-DemoAutoSign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoAutoSign.release.xcconfig"; path = "Target Support Files/Pods-DemoAutoSign/Pods-DemoAutoSign.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A3FAE2DAF7E14698D0D97B3 /* libPods-DemoAutoSign.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 			children = (
 				2290B335263714550014459C /* DemoAutoSign */,
 				2290B334263714550014459C /* Products */,
+				DA2A07DBADEC92118F477D18 /* Pods */,
+				D691ADBF0171F67974C30247 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,24 @@
 			path = DemoAutoSign;
 			sourceTree = "<group>";
 		};
+		D691ADBF0171F67974C30247 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C9E0B3EB9A4AF1F6860F052 /* libPods-DemoAutoSign.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA2A07DBADEC92118F477D18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AD287986D3353819089A461 /* Pods-DemoAutoSign.debug.xcconfig */,
+				815A00869A1615883D9562F4 /* Pods-DemoAutoSign.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +108,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2290B34C263714560014459C /* Build configuration list for PBXNativeTarget "DemoAutoSign" */;
 			buildPhases = (
+				93F61CA6329B3C5C1BFC44F0 /* [CP] Check Pods Manifest.lock */,
 				2290B32F263714550014459C /* Sources */,
 				2290B330263714550014459C /* Frameworks */,
 				2290B331263714550014459C /* Resources */,
@@ -139,6 +165,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93F61CA6329B3C5C1BFC44F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DemoAutoSign-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2290B32F263714550014459C /* Sources */ = {
@@ -288,6 +339,7 @@
 		};
 		2290B34D263714560014459C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AD287986D3353819089A461 /* Pods-DemoAutoSign.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +358,7 @@
 		};
 		2290B34E263714560014459C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 815A00869A1615883D9562F4 /* Pods-DemoAutoSign.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
