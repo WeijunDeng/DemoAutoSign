@@ -19,7 +19,7 @@ def include_debug_xcconfig(target, file)
 
   if File.exist? target_file_path
       target_content = File.read(target_file_path)
-      include_content = "#include? \"#{file}\"\n"
+      include_content = "#include \"#{Dir.pwd}/#{file}\"\n" # 实测使用绝对路径可以避免偶然的Xcode异常 Bundle identifier is missing
       unless target_content.include? include_content
           target_content = include_content + target_content
           File.write(target_file_path, target_content)
